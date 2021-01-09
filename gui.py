@@ -1,5 +1,6 @@
 # import tkinter for the GUI
 from tkinter import *
+import chatbot
 
 # Make a default window using tkinter
 
@@ -11,6 +12,9 @@ window.iconbitmap(r"chatbot_icon22.ico")
 
 canvas = Canvas(window, height=500,width=400)
 canvas.pack()
+
+# train the chatbot
+chatbot.train()
 
 # Add widgets in the window
 
@@ -27,15 +31,18 @@ input_box.place(x=10, y = 420)
 # chatbot image
 chatbot_image = PhotoImage(file="chatbot_icon.png")
 user_image = PhotoImage(file="user.png")
-i = 20
+i = 15
 
 def addchatbot_image():
     global i
     image = Label(window, image=chatbot_image)
     if i<350:
-        canvas.create_window(20, i, window=image)
+        image.place(x=15, y=i)
         #round_rectangle(90, i, 250, 50+i, r=20, outline="#64B5F6", fill="white")
-    i += 70
+        res = chatbot.response(input_box.get("1.0", END))
+        bot_text = Label(window, text=res, justify=CENTER, padx=10, wraplength=300, anchor = E)
+        canvas.create_window(130, i+35, window=bot_text)
+    i += 50
 
 def add_user_image():
     global i
@@ -52,7 +59,7 @@ def add_user_image():
         #round_rectangle(310-j, i, 310, i+k, r=20, outline="#64B5F6", fill = "white")
         text = Label(window, text=input_box.get("1.0", END), justify = RIGHT, pady=4, wraplength=300)
         canvas.create_window(345-j, i+25, window=text)
-    i += 70
+    i += 60
 
 def round_rectangle(x1, y1, x2, y2, r=25, **kwargs):
     points = (x1+r, y1, x1+r, y1, x2-r, y1, x2-r, y1, x2, y1, x2, y1+r, x2, y1+r, x2, y2-r, x2, y2-r, x2, y2, x2-r, y2, x2-r, y2, x1+r, y2, x1+r, y2, x1, y2, x1, y2-r, x1, y2-r, x1, y1+r, x1, y1+r, x1, y1)
@@ -62,17 +69,16 @@ def round_rectangle(x1, y1, x2, y2, r=25, **kwargs):
 # line above send button
 
 
-
 # chatbot messages
 def chatbot_message():
     add_user_image()
+    addchatbot_image()
 
 # send button image
 send_image = PhotoImage(file="send.png")
 send = Button(canvas, image= send_image, height=100, width =200, command = chatbot_message, borderwidth=0)
 send.place(x=200, y= 400)
 
-# use chatbot functions to display the responses in GUI
 
 
 window.mainloop()
