@@ -14,7 +14,7 @@ convo2 = ["Which is the boys hostel for fresher?","Rajendra Bhawan",
           "Which is the girls hostel for fresher?", "Kasturba",
           "Which place is most favoured for photography?","Main Building",
           "Which Bhawan has the best canteen?","Cautley Bhawan",
-          "Which is the best cafe?","Georgia"          ]
+          "Name of cafe in IITR?","Georgia"]
 
 #historyofiitr
 convo3 = ["When was it established?","It was officially established in 1847.",
@@ -29,23 +29,30 @@ convo4 = ["How do I get to Roorkee?","Well, the nearest airhead to Roorkee is De
           "Which trains go to Roorkee?","Shatabdi and the JanShatabdi trains go all the way to Dehradun, passing through Roorkee",
           ""]
 
-#und
-convo5 = ["Which banks are inside the campus?","Punjab National Bank and State Bank of India",
+#undefined
+convo5 = ["Name of banks are inside the campus?","Punjab National Bank and State Bank of India",
           "How is the climate?","You'll see a continental, read extreme, climate. This means that it starts getting cold in about November.",
-          ""
-
-
-
-
+          ""]
 
 
 
 
 # define a function to train the bot with the training data(Siddharth)
 
+chatbot = ChatBot("Name", read_only=True)
 
+trainer = ListTrainer(chatbot)
+trainer1 = ChatterBotCorpusTrainer(chatbot)
 
+trainer.train(convo1)
+trainer.train(convo2)
+trainer.train(convo3)
+trainer.train(convo4)
+trainer.train(convo5)
 
+# train additional attributes
+trainer.train("chatterbot.corpus.english.greetings")
+trainer.train("chatterbot.corpus.english.emotion")
 
 # define a function to get response from the bot (siddharth)
 
