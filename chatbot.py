@@ -59,21 +59,22 @@ covo7 = ["How much distance from IITR?","51.1 km via NH334 and NH34",
 # define a function to train the bot with the training data(Siddharth)
 chatbot = ChatBot("Name", read_only=True)
 
-trainer = ListTrainer(chatbot)
-trainer1 = ChatterBotCorpusTrainer(chatbot)
-
-trainer.train(convo1)
-trainer.train(convo2)
-trainer.train(convo3)
-trainer.train(convo4)
-trainer.train(convo5)
-
-# train additional attributes
-trainer.train("chatterbot.corpus.english.greetings")
-trainer.train("chatterbot.corpus.english.emotion")
+def train():
+    #trainer = ListTrainer(chatbot)
+    trainer1 = ChatterBotCorpusTrainer(chatbot)
+    #trainer.train(convo1)
+    #trainer.train(convo2)
+    #trainer.train(convo3)
+    #trainer.train(convo4)
+    #trainer.train(convo5)
+    # train additional attributes
+    trainer1.train("chatterbot.corpus.english.greetings")
+    trainer1.train("chatterbot.corpus.english.emotion")
 
 
 
 
 # define a function to get response from the bot (siddharth)
-
+def response(input):
+    res = chatbot.get_response(input.capitalize())
+    return res
