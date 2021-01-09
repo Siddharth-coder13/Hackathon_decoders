@@ -39,6 +39,10 @@ convo6 = ["places for cinemas?","RR Cinemas and Neelam",
           "fresher's party?","Motel Divine",]
 
 
+#Rishikesh
+transport = []
+
+
 
 
 
