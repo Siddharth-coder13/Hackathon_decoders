@@ -29,7 +29,7 @@ convo4 = ["How do I get to Roorkee?","Well, the nearest airhead to Roorkee is De
           "Which trains go to Roorkee?","Shatabdi and the JanShatabdi trains go all the way to Dehradun, passing through Roorkee",
           ""]
 
-#und
+#undefined
 convo5 = ["Which banks are inside the campus?","Punjab National Bank and State Bank of India",
           "How is the climate?","You'll see a continental, read extreme, climate. This means that it starts getting cold in about November.",
           "What are the best places to eat?","Royal Palace,Olive & Rustic House,Peppery Herbs,Pizza Hut & Domino’s"]
@@ -54,7 +54,20 @@ covo7 = ["How much distance from IITR?","51.1 km via NH334 and NH34",
 
 
 # define a function to train the bot with the training data(Siddharth)
+chatbot = ChatBot("Name", read_only=True)
 
+trainer = ListTrainer(chatbot)
+trainer1 = ChatterBotCorpusTrainer(chatbot)
+
+trainer.train(convo1)
+trainer.train(convo2)
+trainer.train(convo3)
+trainer.train(convo4)
+trainer.train(convo5)
+
+# train additional attributes
+trainer.train("chatterbot.corpus.english.greetings")
+trainer.train("chatterbot.corpus.english.emotion")
 
 
 
