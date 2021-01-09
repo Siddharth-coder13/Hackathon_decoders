@@ -32,8 +32,11 @@ convo4 = ["How do I get to Roorkee?","Well, the nearest airhead to Roorkee is De
 #und
 convo5 = ["Which banks are inside the campus?","Punjab National Bank and State Bank of India",
           "How is the climate?","You'll see a continental, read extreme, climate. This means that it starts getting cold in about November.",
-          ""
+          "What are the best places to eat?","Royal Palace,Olive & Rustic House,Peppery Herbs,Pizza Hut & Domino’s"]
 
+#places outside campus to visit in roorkee
+convo6 = ["places for cinemas?","RR Cinemas and Neelam",
+          "fresher's party?","Motel Divine",]
 
 
 
