@@ -6,8 +6,9 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 # make a set of conversations(Chirag)
 convo1 = ["Pardon",
           "Hello", "Hi, Its a pleasure to meet you!",
-          "How can you help me?", " I can guide you on exploring places nearby and inside IIT Roorkee! :)"
-          "All right!, tell me something about IIT Roorkee","Okay, What do you want to know?"]
+          "How can you help me?", " I can be your guide for Roorkee! :)",
+          "All right!, tell me something about IIT Roorkee","Okay, What do you want to know?",
+          "How are you doing?", "I am great!"]
 
 
 convo2 = ["Which is the boys hostel for fresher?","Rajendra Bhawan",
@@ -20,17 +21,20 @@ convo2 = ["Which is the boys hostel for fresher?","Rajendra Bhawan",
           "Which is the best place to see snow fall?", "",
           "Which is the highest place nearby Roorkee?", "",
           "What adventurous sports to do in or nearby Roorkee?", "",
-          "Is there any National Parks or Wildlife Sanctury inside or nearby Roorkee?", ""]
+          "Is there any National Parks or Wildlife Sanctury inside or nearby Roorkee?",""]
 
 #historyofiitr
 convo3 = ["When was it established?","It was officially established in 1847.",
-          "When did it recieved IIT status?","It was given IIT status in 2001."
-          "What were the initial names of IITR?","College of Civil Engineering,Thomason College of Civil Engineering,University of Roorkee"]
+          "When did it recieved IIT status?","It was given IIT status in 2001.",
+          "What were the initial names of IITR?","College of Civil Engineering,Thomason College of Civil Engineering,University of Roorkee",
+          ""
+          ]
 
 #transportation
 convo4 = ["How do I get to Roorkee?","Well, the nearest airhead to Roorkee is Dehradun, around 70km away, but find Delhi a more convenient airport. Delhi is about 180km away",
           "How can I get a bus to roorkee?","Buses can be obtained either from I.S.B.T. Kashmere Gate, Delhi or from I.S.B.T. Anand Vihar Ghaziabad",
-          "Which trains go to Roorkee?","Shatabdi and the JanShatabdi trains go all the way to Dehradun, passing through Roorkee"]
+          "Which trains go to Roorkee?","Shatabdi and the JanShatabdi trains go all the way to Dehradun, passing through Roorkee",
+          ""]
 
 #undefined
 convo5 = ["Which banks are inside the campus?","Punjab National Bank and State Bank of India",
