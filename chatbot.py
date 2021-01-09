@@ -10,11 +10,11 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 
 
 
-# Train the bot with the training data(Siddharth)
+# define a function to train the bot with the training data(Siddharth)
 
 
 
 
 
-# get response from the bot (siddharth)
+# define a function to get response from the bot (siddharth)
 
