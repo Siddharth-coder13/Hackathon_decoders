@@ -17,8 +17,7 @@ send_image = PhotoImage(file="send.png")
 
 
 send = Button(window, image= send_image, height=100, width =200, command = send_msg, borderwidth=0)
-send.pack(pady = 200, padx = 60)
-
+send.pack(x=200, y=300)
 
 # use chatbot functions to display the responses in GUI
 

@@ -40,7 +40,12 @@ convo6 = ["places for cinemas?","RR Cinemas and Neelam",
 
 
 #Rishikesh
-transport = []
+covo7 = ["How much distance from IITR?","51.1 km via NH334 and NH34",
+             "What are the main features of tourism in Rishikesh","It has numerous yoga centres that attract tourists, ashrams, temple sections of Rama Jhula and Lakshman Jhula, the Ganga Arti performed at dusk at the Triveni Ghat is popular with visitors.",
+             "Best places to visit in Rishikesh?", "Lakshman Jhula, Neelkanth Mahadev Temple, The Beatles Ashram, Swarg Ashram, Rajaji National Park, Parmarth Niketan, Kaudiyala, Shivpuri, Jumpin Heights, Narendra Nagar",
+             "What total cost it may take to travel tto Rishikesh?", "around RS.6310 for two nights per person with makemytrip"
+             "Nearest airport from Rishikesh?", "Jolly Grant Airport in Dehradun that is located at a distance of 35 km",
+             "Do Rishikesh have a Railway Station?", "Rishikesh Railway Station (Station Code: RKSH) or Rishikesh Junction is a small railway station which connects through a branch line from Haridwar Railway Station."]
 
 
 
