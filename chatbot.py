@@ -15,12 +15,7 @@ convo2 = ["Which is the boys hostel for fresher?","Rajendra Bhawan",
           "Which place is most favoured for photography?","Main Building",
           "Which Bhawan has the best canteen?","Cautley Bhawan",
           "Which is the best cafe?","Georgia",
-          "From where you can get the view of whole IITR1", "",
-          "Which is the best place for getting peace?", "",
-          "Which is the best place to see snow fall?", "",
-          "Which is the highest place nearby Roorkee?", "",
-          "What adventurous sports to do in or nearby Roorkee?", "",
-          "Is there any National Parks or Wildlife Sanctury inside or nearby Roorkee?", ""]
+          "What adventurous sports to do in or nearby Roorkee?", "Rafting",]
 
 #historyofiitr
 convo3 = ["When was it established?","It was officially established in 1847.",
@@ -60,13 +55,13 @@ covo7 = ["How much distance from IITR?","51.1 km via NH334 and NH34",
 chatbot = ChatBot("Name", read_only=True)
 
 def train():
-    #trainer = ListTrainer(chatbot)
+    trainer = ListTrainer(chatbot)
     trainer1 = ChatterBotCorpusTrainer(chatbot)
-    #trainer.train(convo1)
-    #trainer.train(convo2)
-    #trainer.train(convo3)
-    #trainer.train(convo4)
-    #trainer.train(convo5)
+    trainer.train(convo1)
+    trainer.train(convo2)
+    trainer.train(convo3)
+    trainer.train(convo4)
+    trainer.train(convo5)
     # train additional attributes
     trainer1.train("chatterbot.corpus.english.greetings")
     trainer1.train("chatterbot.corpus.english.emotion")

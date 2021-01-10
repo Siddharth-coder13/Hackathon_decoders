@@ -10,6 +10,8 @@ window.geometry("400x500")
 window.resizable(0,0)
 window.iconbitmap(r"chatbot_icon22.ico")
 
+
+
 canvas = Canvas(window, height=500,width=400)
 canvas.pack()
 
@@ -38,33 +40,22 @@ def addchatbot_image():
     image = Label(window, image=chatbot_image)
     if i<350:
         image.place(x=15, y=i)
-        #round_rectangle(90, i, 250, 50+i, r=20, outline="#64B5F6", fill="white")
         res = chatbot.response(input_box.get("1.0", END))
-        bot_text = Label(window, text=res, justify=CENTER, padx=10, wraplength=300, anchor = E)
-        canvas.create_window(130, i+35, window=bot_text)
-    i += 50
+        bot_text = Label(window, anchor=W, text=res, wraplength=270, justify=LEFT)
+        bot_text.place(x=75, y=i+21)
+    i += 60
 
 def add_user_image():
     global i
     image = Label(window, image=user_image)
     if i<350:
-        canvas.create_window(370, i+15, window=image)
+        canvas.create_window(350, i+15, window=image)
         j = len(input_box.get("1.0", END))
-        k = 30
-        if j>300:
-            k *= (j/300)
-            j = 300
-        elif j<50:
-            j = 50
-        #round_rectangle(310-j, i, 310, i+k, r=20, outline="#64B5F6", fill = "white")
-        text = Label(window, text=input_box.get("1.0", END), justify = RIGHT, pady=4, wraplength=300)
-        canvas.create_window(345-j, i+25, window=text)
-    i += 60
-
-def round_rectangle(x1, y1, x2, y2, r=25, **kwargs):
-    points = (x1+r, y1, x1+r, y1, x2-r, y1, x2-r, y1, x2, y1, x2, y1+r, x2, y1+r, x2, y2-r, x2, y2-r, x2, y2, x2-r, y2, x2-r, y2, x1+r, y2, x1+r, y2, x1, y2, x1, y2-r, x1, y2-r, x1, y1+r, x1, y1+r, x1, y1)
-    return canvas.create_polygon(points, **kwargs, smooth=True)
-
+        if j<40:
+            j = 40
+            text = Label(window, text=input_box.get("1.0", END), justify = RIGHT, wraplength=270, anchor=E)
+            canvas.create_window(300-j, i+20, window=text)
+    i += 50
 
 # line above send button
 
@@ -73,6 +64,7 @@ def round_rectangle(x1, y1, x2, y2, r=25, **kwargs):
 def chatbot_message():
     add_user_image()
     addchatbot_image()
+    input_box.delete("1.0", END)
 
 # send button image
 send_image = PhotoImage(file="send.png")
